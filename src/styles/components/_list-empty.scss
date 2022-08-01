@@ -1,0 +1,24 @@
+.list_empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .is_empty {
+    height: 278px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: calc(25% - 189px);
+    padding-bottom: calc(25% - 189px);
+    text-align: center;
+
+    p{
+      font-weight: 200;
+    }
+    a{
+      width: 100%;
+    }
+  }
+}

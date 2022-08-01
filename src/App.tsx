@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import {Routes, Route} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './styles/style.css'
+import {Cart, Favorite, Home} from "./Pages";
+import {MainLayout} from "./Layouts/MainLayout";
+
+
+
+
+const App: React.FC = () => {
+    const [overlayShow, setOverlayShow] = React.useState(false);
+    console.log(localStorage.favoriteList)
+
+    const setOverlay = () => {
+        setOverlayShow(!overlayShow);
+    }
+
+    return (
+        <Routes>
+            <Route path="/" element={<MainLayout setOverlay={setOverlay}/>}>
+                <Route index element={<Home setOverlay={setOverlay} overlayShow={overlayShow}/>}/>
+                <Route path="/cart" element={<Cart/>}/>
+                <Route path="/favorite" element={<Favorite setOverlay={setOverlay} overlayShow={overlayShow}/>}/>
+            </Route>
+        </Routes>
+    );
 }
 
-export default App;
+export {App}
