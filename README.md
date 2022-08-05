@@ -1,5 +1,5 @@
 # About this project
-Adaptive Internet shop of sneakers. Written in react. Basic functions, primitive design/animations.
+Adaptive Internet shop of sneakers. Written in ReactJS . Basic functions, primitive design/animations.
 
 # Project created with
 ♦Typescript
