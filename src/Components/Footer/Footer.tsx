@@ -33,10 +33,10 @@ const Footer = () => {
                 </p>
             </div>
             <ul className="footer_links">
-                <li><a href="https://www.instagram.com/alex_bielow/" target="_blank"><FontAwesomeIcon icon={faInstagram}/></a></li>
-                <li><a href="https://www.facebook.com/sasha.below.336" target="_blank"><FontAwesomeIcon icon={faFacebook}/></a></li>
-                <li><a href="#" target="_blank"><FontAwesomeIcon icon={faTelegram}/></a></li>
-                <li><a href="#" target="_blank"><FontAwesomeIcon icon={faViber}/></a></li>
+                <li><a href="https://www.instagram.com/alex_bielow/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram}/></a></li>
+                <li><a href="https://www.facebook.com/sasha.below.336" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook}/></a></li>
+                <li><a href="#" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTelegram}/></a></li>
+                <li><a href="#" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faViber}/></a></li>
             </ul>
         </footer>
     );

@@ -3,4 +3,11 @@
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 1em;
+  background: white;
+}
+
+.empty_sneakers_list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

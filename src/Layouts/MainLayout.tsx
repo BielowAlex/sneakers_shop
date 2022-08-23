@@ -1,20 +1,18 @@
 import React from 'react';
-import {Outlet, useLocation} from 'react-router-dom';
-import {Footer, Header} from "../Components";
+import {Outlet} from 'react-router-dom';
+
+import {Footer, Header, Overlay} from "../Components";
 
 interface IProps{
-    setOverlay:()=>void
+    overlayShow:boolean,
+    setOverlay: () => void;
 }
 
-const MainLayout:React.FC<IProps> = ({setOverlay}) => {
-    const {pathname} = useLocation();
-
+const MainLayout: React.FC<IProps> = ({setOverlay,overlayShow}) => {
     return (
         <div>
-            {pathname !=='/login' && pathname!=='/signup'
-                ?<Header setOverlay={setOverlay}/>
-                :null
-            }
+            <Overlay setOverlay={setOverlay} overlayShow={overlayShow}/>
+            <Header setOverlay={setOverlay}/>
             <Outlet/>
             <Footer/>
         </div>

@@ -2,9 +2,10 @@ import React from 'react';
 
 import {useAppDispatch} from "../../hook/redux";
 import {sneakersActions} from "../../redux";
+import {animated, config, Transition} from "react-spring";
 
-interface IProps{
-    isActive:boolean
+interface IProps {
+    isActive: boolean
 }
 
 const Filter: React.FC<IProps> = ({isActive}) => {
@@ -24,7 +25,7 @@ const Filter: React.FC<IProps> = ({isActive}) => {
                 minPrice: minPrice,
                 shoeSize: shoeSize
             }))
-        }else{
+        } else {
             dispatch(sneakersActions.filterList({
                 gender: '',
                 maxPrice: 0,
@@ -33,56 +34,66 @@ const Filter: React.FC<IProps> = ({isActive}) => {
             }))
         }
 
-    }, [dispatch,gender, shoeSize, minPrice, maxPrice, isActive])
+    }, [dispatch, gender, shoeSize, minPrice, maxPrice, isActive])
 
     return (
         <div className="sneakers_top_filter">
-            <ul className={`filter_options ${isActive ? '_active' : ''}`}>
-                <li className="gender">
-                    <span>Gender:</span>
-                    <label>
-                        <span>
-                            <input
-                                type="radio"
-                                name="gender"
-                                onClick={() => setGender('M')}/>
-                                Male
-                        </span>
-                        <span>
-                            <input
-                                type="radio"
-                                name="gender"
-                                onClick={() => setGender('F')}/>
-                                Female
-                        </span>
-                    </label>
-                </li>
-                <li>
-                    <span>Shoe size:</span>
-                    <input
-                        type="number"
-                        min={37}
-                        max={48}
-                        onChange={(e) => setShoeSize(e.target.value !== '' ? parseInt(e.target.value) : 0)}/>
-                </li>
-                <li>
-                    <span>Min price:</span>
-                    <input
-                        type="number"
-                        min={0}
-                        max={3000}
-                        onChange={(e) => setMinPrice(e.target.value !== '' ? parseInt(e.target.value) : 0)}
-                    />
-                </li>
-                <li>
-                    <span>Max price:</span>
-                    <input
-                        type="number"
-                        min={999}
-                        max={3000}
-                        onChange={(e) => setMaxPrice(e.target.value !== '' ? parseInt(e.target.value) : 0)}/>
-                </li>
-            </ul>
+            <Transition items={isActive}
+                        from={{opacity: 0, transform: 'translateY(-100%)'}}
+                        enter={{opacity: 1, transform: 'translateY(0%)'}}
+                        leave={{opacity: 0, transform: 'translateY(-100%)'}}
+                        delay={200}
+                        config={config.molasses}>
+                {(styles, item) => item &&
+                    <animated.div style={styles}>
+                        <ul className={`filter_options ${isActive ? '_active' : ''}`}>
+                            <li className="gender">
+                                <span>Gender:</span>
+                                <label>
+                                    <span>
+                                        <input
+                                            type="radio"
+                                            name="gender"
+                                            onClick={() => setGender('M')}/>
+                                            Male
+                                    </span>
+                                    <span>
+                                        <input
+                                            type="radio"
+                                            name="gender"
+                                            onClick={() => setGender('F')}/>
+                                            Female
+                                     </span>
+                                </label>
+                            </li>
+                            <li>
+                                <span>Shoe size:</span>
+                                <input
+                                    type="number"
+                                    min={37}
+                                    max={48}
+                                    onChange={(e) => setShoeSize(e.target.value !== '' ? parseInt(e.target.value) : 0)}/>
+                            </li>
+                            <li>
+                                <span>Min price:</span>
+                                <input
+                                    type="number"
+                                    min={0}
+                                    max={3000}
+                                    onChange={(e) => setMinPrice(e.target.value !== '' ? parseInt(e.target.value) : 0)}
+                                />
+                            </li>
+                            <li>
+                                <span>Max price:</span>
+                                <input
+                                    type="number"
+                                    min={999}
+                                    max={3000}
+                                    onChange={(e) => setMaxPrice(e.target.value !== '' ? parseInt(e.target.value) : 0)}/>
+                            </li>
+                        </ul>
+                    </animated.div>}
+            </Transition>
         </div>
     );
 };
