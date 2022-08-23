@@ -21,7 +21,7 @@
   top: 0;
   background: #ffff;
   height: 100%;
-  width: 385px;
+  width: 500px;
   border-left: 2px solid #bdbcbc;
   box-shadow: #2d2d2d -10px 1px 60px;
   padding: 30px;
@@ -46,7 +46,8 @@
   flex-direction: column;
   height: 100%;
 }
-.cart_empty{
+
+.cart_empty {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,9 +85,12 @@
 .menu_item_list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 20px;
   height: 100%;
   overflow-y: scroll;
+  width: 100%;
+  padding: 10px;
 }
 
 .overlay_btn {
@@ -116,6 +120,7 @@
   column-gap: 30px;
   padding: 10px;
   transition: all 0.3s linear;
+  width: 300px;
 
   &_right {
     display: flex;
@@ -161,3 +166,14 @@
   }
 }
 
+
+.delete_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

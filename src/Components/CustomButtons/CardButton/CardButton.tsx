@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 import {ISneakers} from "../../../interfaces/sneakers_interface";
 import {useAppDispatch} from "../../../hook/redux";
 import {sneakersActions} from "../../../redux";
@@ -6,20 +7,17 @@ import {sneakersActions} from "../../../redux";
 interface IProps {
     children?: React.ReactNode,
     sneakers?: ISneakers,
-    isRemove: boolean,
-    index?:number
 }
 
-const CardButton: React.FC<IProps> = ({children, sneakers, isRemove,index}) => {
+const CardButton: React.FC<IProps> = ({children, sneakers}) => {
     const [isAdded, setIsAdded] = useState<boolean>(false);
 
     const dispatch = useAppDispatch();
 
     const addSneakers =  () => {
-        !isRemove
-            ? dispatch(sneakersActions.addProduct(sneakers))
-            : dispatch(sneakersActions.removeProduct(index));
-        setIsAdded(!isAdded);
+            dispatch(sneakersActions.addProduct(sneakers))
+            setIsAdded(true)
+
     }
 
     React.useEffect(()=>{
@@ -30,8 +28,7 @@ const CardButton: React.FC<IProps> = ({children, sneakers, isRemove,index}) => {
     },[isAdded])
 
     return (
-        <button className={`card_btn ${isAdded&&!isRemove?'_active':''}`} onClick={addSneakers}>
-            {/*{isAdded ? <img src="img/added.svg" alt="added"/> : children}*/}
+        <button className={`card_btn ${isAdded?'_active':''}`} onClick={addSneakers}>
             {children?children:<span className="btn_item"/>}
         </button>
     );
