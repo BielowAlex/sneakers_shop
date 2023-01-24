@@ -6,7 +6,7 @@ import {urls} from "../constants";
 type Res<T> = Promise<AxiosResponse<T>>
 
 const sneakersService = {
-    getAll: (): Res<ISneakers[]> => axiosService.get(urls.users)
+    getAll: (): Res<ISneakers[]> => axiosService.get(urls.sneakers)
 }
 
 export {

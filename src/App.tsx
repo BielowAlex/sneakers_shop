@@ -2,8 +2,8 @@ import * as React from "react";
 import {Route, Routes} from "react-router-dom";
 
 import './styles/style.css'
-import {MainLayout} from "./Layouts/MainLayout";
-import { Favorite, Home} from "./Pages";
+import {MainLayout} from "./layouts/MainLayout";
+import { Favorite, Home} from "./pages";
 
 
 const App: React.FC = () => {

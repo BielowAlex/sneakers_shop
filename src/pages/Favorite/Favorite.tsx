@@ -1,5 +1,5 @@
 import React from 'react';
-import {FavoriteSneakers} from "../../Components";
+import {FavoriteSneakers} from "../../components";
 
 
 const Favorite:React.FC = () => {

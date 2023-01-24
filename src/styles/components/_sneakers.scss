@@ -1,7 +1,6 @@
 
 .sneakers {
   width: 100%;
-
   &_top {
     display: flex;
     flex-direction: column;
@@ -43,6 +42,7 @@
       align-items: center;
       row-gap: 20px;
       overflow: hidden;
+      padding: 20px;
 
       .filter_options {
         display: flex;

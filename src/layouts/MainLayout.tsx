@@ -1,7 +1,7 @@
 import React from 'react';
 import {Outlet} from 'react-router-dom';
 
-import {Footer, Header, Overlay} from "../Components";
+import {Footer, Header, Overlay} from "../components";
 
 interface IProps{
     overlayShow:boolean,

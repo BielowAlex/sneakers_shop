@@ -1,5 +1,5 @@
 import React from 'react';
-import {Slider, Sneakers} from "../../Components";
+import {Slider, Sneakers} from "../../components";
 
 const Home:React.FC = () => {
     return(
