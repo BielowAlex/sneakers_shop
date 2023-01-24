@@ -4,7 +4,7 @@
   justify-content: center;
   padding: 45px 0;
 
-  &_top {
+  &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,58 +20,52 @@
         color: #707070;
       }
     }
+  }
+  &__window {
+    display: flex;
+    overflow: hidden;
 
-    .slider_window {
+    .slide-list {
       display: flex;
-      overflow: hidden;
+      width: 990px;
+      position: relative;
+      transition: all 0.8s ease;
 
-
-      .slider_list {
-        display: flex;
-        width: 990px;
+      &--el{
         position: relative;
-        transition: all 0.8s ease;
+        height: 300px;
+        min-width: 100%;
+        overflow: hidden;
+        transition: all 0.3s linear;
 
-
-
-        .poster {
-          position: relative;
-          height: 300px;
-          min-width: 100%;
-          overflow: hidden;
+        &__btn{
+          position: absolute;
+          top: 200px;
+          left: 80px;
+          padding: 13px 39px;
+          background: #A5D364;
+          color: #ffffff;
+          font-weight: 600;
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
           transition: all 0.3s linear;
 
-          button {
-            position: absolute;
-            top: 200px;
-            left: 80px;
-            padding: 13px 39px;
-            background: #A5D364;
-            color: #ffffff;
-            font-weight: 600;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s linear;
-
-            &:hover {
-              background: #b1dc74;
-            }
+          &:hover {
+            background: #b1dc74;
           }
         }
       }
     }
-
-
   }
 
-  &_bottom {
+  .slide-nums{
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 15px;
 
-    .slide_line {
+    .slide-num{
       width: 40px;
       height: 5px;
       background: #9D9D9D;
@@ -82,6 +76,4 @@
       }
     }
   }
-
-
 }

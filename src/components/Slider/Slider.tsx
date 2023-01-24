@@ -2,7 +2,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import {useAppSelector} from "../../hook/redux";
-import {Poster} from "../Poster";
+import {Slide} from "../Slide";
 
 const Slider: React.FC = () => {
     const [count, setCount] = React.useState<number>(0);
@@ -40,26 +40,26 @@ const Slider: React.FC = () => {
 
     return (
         <div className="slider" onMouseOver={() => setIsActive(false)} onMouseLeave={() => setIsActive(true)}>
-            <div className="slider_top">
+            <div className="slider__top">
                 <FontAwesomeIcon icon={faChevronLeft} onClick={swipeRight}/>
-                <div className="slider_window">
-                    <div className="slider_list" style={{
+                <div className="slider__window">
+                    <div className="slide-list" style={{
                         right: count,
                         transition: count === posterList.length * 990 ? 'all 0.1s ease' : 'all 0.8s ease'
                     }}>
-                        {posterList && posterList.map(poster => <Poster poster={poster} key={poster.id.toString()}
-                                                                        count={count}/>)}
+                        {posterList && posterList.map(poster => <Slide poster={poster} key={poster.id.toString()}
+                                                                       count={count}/>)}
                     </div>
                 </div>
                 <FontAwesomeIcon icon={faChevronRight} onClick={swipeLeft}/>
             </div>
-            <div className="slider_bottom">
-                <span className={`slide_line ${count === 0 ? '_active' : ''}`} onClick={() => setSlide(0)}/>
-                <span className={`slide_line ${count === 990 ? '_active' : ''}`} onClick={() => setSlide(990)}/>
-                <span className={`slide_line ${count === 1980 ? '_active' : ''}`} onClick={() => setSlide(1980)}/>
-                <span className={`slide_line ${count === 2970 ? '_active' : ''}`} onClick={() => setSlide(2970)}/>
-                <span className={`slide_line ${count === 3960 ? '_active' : ''}`} onClick={() => setSlide(3960)}/>
-                <span className={`slide_line ${count === 4950 ? '_active' : ''}`} onClick={() => setSlide(4950)}/>
+            <div className="slide-nums">
+                <span className={`slide-num ${count === 0 ? '_active' : ''}`} onClick={() => setSlide(0)}/>
+                <span className={`slide-num ${count === 990 ? '_active' : ''}`} onClick={() => setSlide(990)}/>
+                <span className={`slide-num ${count === 1980 ? '_active' : ''}`} onClick={() => setSlide(1980)}/>
+                <span className={`slide-num ${count === 2970 ? '_active' : ''}`} onClick={() => setSlide(2970)}/>
+                <span className={`slide-num ${count === 3960 ? '_active' : ''}`} onClick={() => setSlide(3960)}/>
+                <span className={`slide-num ${count === 4950 ? '_active' : ''}`} onClick={() => setSlide(4950)}/>
             </div>
         </div>
     );

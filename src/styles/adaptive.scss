@@ -43,9 +43,6 @@
       }
     }
   }
-  .slider {
-    display: none;
-  }
 }
 
 
@@ -55,9 +52,7 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .slider {
-    display: none;
-  }
+
 
   .sneakers {
     width: 100%;
@@ -113,7 +108,7 @@
   }
 
 
-  .sneakers_card {
+  .sneakers-card {
     margin: 0 auto;
   }
 
@@ -138,25 +133,30 @@
 
   }
 
-  .menu_sneakers_card_right .title h3 {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 10px;
-    color: #000000;
+  .overlay__sneakers-card{
+    &--title{
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 10px;
+      color: #000000;
+    }
   }
-  .subtext {
-    font-weight: 200;
-    font-size: 10px;
-    line-height: 10px;
-    color: #9D9D9D;
+  .sneakers-card__info-price{
+    &--subtext {
+      font-weight: 200;
+      font-size: 10px;
+      line-height: 10px;
+      color: #9D9D9D;
+    }
+
+    &--price_count {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
   }
 
-  .price .price_count {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 12px;
-    color: #000000;
-  }
 
 
 }
@@ -168,9 +168,7 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .slider {
-    display: none;
-  }
+
 
   .sneakers {
     width: 100%;
@@ -216,7 +214,7 @@
   }
 
 
-  .sneakers_card {
+  .sneakers-card {
     margin: 0 auto;
   }
 }

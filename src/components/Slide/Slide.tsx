@@ -8,7 +8,7 @@ interface IProps{
 }
 
 
-const Poster:React.FC<IProps> = ({poster:{imageUrl,id},count}) => {
+const Slide:React.FC<IProps> = ({poster:{imageUrl,id},count}) => {
     const [isShow,setIsShow] = React.useState<boolean>(true);
 
     React.useEffect(()=>{
@@ -20,11 +20,11 @@ const Poster:React.FC<IProps> = ({poster:{imageUrl,id},count}) => {
     },[count, id])
 
     return (
-        <div className="poster" style={{opacity:isShow?1:0}}>
+        <div className="slide-list--el" style={{opacity:isShow?1:0}}>
             <img src={imageUrl} alt="slide"/>
-            <button>Buy</button>
+            <button className="slide-list--el__btn">Buy</button>
         </div>
     );
 };
 
-export {Poster};
+export {Slide};
