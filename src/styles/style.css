@@ -313,26 +313,6 @@ a {
   padding: 25px;
   border-bottom: 1px solid #EAEAEA;
   transition: all 0.3s linear; }
-  .header .logo {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 16px; }
-    .header .logo-info {
-      display: flex;
-      flex-direction: column; }
-      .header .logo-info__title {
-        font-weight: 700;
-        font-size: 20px;
-        color: #000000;
-        margin: 0;
-        text-transform: uppercase; }
-      .header .logo-info__subtext {
-        font-weight: 200;
-        font-size: 14px;
-        line-height: 17px;
-        color: #9D9D9D; }
   .header__nav {
     display: flex;
     column-gap: 30px;
@@ -907,6 +887,27 @@ a {
   .list_empty .is_empty a {
     width: 100%; }
 
+.logo {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 16px; }
+  .logo-info {
+    display: flex;
+    flex-direction: column; }
+    .logo-info__title {
+      font-weight: 700;
+      font-size: 20px;
+      color: #000000;
+      margin: 0;
+      text-transform: uppercase; }
+    .logo-info__subtext {
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 17px;
+      color: #9D9D9D; }
+
 .footer {
   display: flex;
   align-items: center;
@@ -915,7 +916,7 @@ a {
   border-top: 1px solid #c7c7c7;
   transition: all 0.3s linear;
   background: #EEEEEE; }
-  .footer_about_us {
+  .footer__about-us {
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -924,15 +925,19 @@ a {
     text-align: center;
     font-size: 15px;
     font-weight: 200; }
-  .footer_links {
+    .footer__about-us--info {
+      font-weight: 100;
+      font-size: 16px;
+      font-family: sans-serif; }
+  .footer__social-media {
     display: flex;
     column-gap: 20px;
     list-style-type: none;
     font-size: 42px; }
-    .footer_links li a {
+    .footer__social-media--link {
       color: #111111;
       transition: all 0.3s linear; }
-      .footer_links li a:hover {
+      .footer__social-media--link:hover {
         color: #9D9D9D; }
   .footer:hover {
     box-shadow: #9D9D9D 1px 1px 10px; }
