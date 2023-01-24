@@ -631,7 +631,7 @@ svg path {
     .sneakers-list--empty__ad-advice {
       font-weight: 100; }
 
-.sneakers_card {
+.sneakers-card {
   border: 2px solid #F3F3F3;
   border-radius: 30px;
   display: flex;
@@ -645,62 +645,61 @@ svg path {
   cursor: context-menu;
   transition: all 0.3s linear;
   box-sizing: border-box; }
-  .sneakers_card_top {
+  .sneakers-card__top {
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .sneakers_card_top .photo {
-      position: relative;
-      width: 100%;
-      height: 112px; }
-      .sneakers_card_top .photo svg {
-        position: absolute;
-        left: 0;
-        border: 1px solid rgba(157, 157, 157, 0.26);
-        padding: 8.53px;
-        border-radius: 10px;
-        transition: all 0.3s linear; }
-        .sneakers_card_top .photo svg path {
-          fill: rgba(157, 157, 157, 0.26); }
-        .sneakers_card_top .photo svg:hover {
-          border-color: #B5B5B5; }
-          .sneakers_card_top .photo svg:hover path {
-            fill: #B5B5B5; }
-        .sneakers_card_top .photo svg.favorite {
-          background: #ffdbdb;
-          border-color: #ffdbdb; }
-          .sneakers_card_top .photo svg.favorite path {
-            fill: #FF8585; }
-    .sneakers_card_top h3 {
-      font-weight: 200;
-      text-align: justify; }
-  .sneakers_card_bottom {
+  .sneakers-card__title {
+    font-weight: 200;
+    text-align: justify; }
+  .sneakers-card__poster {
+    position: relative;
+    width: 100%;
+    height: 112px; }
+  .sneakers-card__favorite {
+    position: absolute;
+    left: 0;
+    border: 1px solid rgba(157, 157, 157, 0.26);
+    padding: 8.53px;
+    border-radius: 10px;
+    transition: all 0.3s linear; }
+    .sneakers-card__favorite path {
+      fill: rgba(157, 157, 157, 0.26); }
+    .sneakers-card__favorite:hover {
+      border-color: #B5B5B5; }
+      .sneakers-card__favorite:hover path {
+        fill: #B5B5B5; }
+    .sneakers-card__favorite._isFavorite {
+      background: #ffdbdb;
+      border-color: #ffdbdb; }
+      .sneakers-card__favorite._isFavorite path {
+        fill: #FF8585; }
+  .sneakers-card__info {
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 39px;
     width: 100%;
     height: 32px; }
-  .sneakers_card:hover {
+    .sneakers-card__info-price {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2px;
+      text-transform: uppercase; }
+      .sneakers-card__info-price--price_count {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000; }
+  .sneakers-card:hover {
     box-shadow: #9D9D9D 1px 5px 10px;
     transform: translateY(-5px); }
-    .sneakers_card:hover .card_btn {
+    .sneakers-card:hover .card-btn {
       transform: scale(1.1); }
-      .sneakers_card:hover .card_btn .btn_item::before {
+      .sneakers-card:hover .card-btn .btn_item::before {
         transform: rotate(270deg); }
 
-.price {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2px;
-  text-transform: uppercase; }
-  .price .price_count {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000; }
-
-.card_btn {
+.card-btn {
   width: 32px;
   height: 32px;
   display: flex;
@@ -712,13 +711,13 @@ svg path {
   box-sizing: border-box;
   background: white;
   transition: all 0.5s ease; }
-  .card_btn .btn_item {
+  .card-btn__item {
     width: 12px;
     height: 2px;
     background: #D3D3D3;
     border-radius: 4px;
     transition: all 0.5s ease; }
-  .card_btn .btn_item::before {
+  .card-btn__item::before {
     content: "";
     position: absolute;
     left: calc(50% - 6px);
@@ -728,18 +727,18 @@ svg path {
     border-radius: 4px;
     transform: rotate(90deg);
     transition: all 0.5s ease; }
-  .card_btn._active {
+  .card-btn._active {
     transform: scale(1.1);
     background: linear-gradient(180deg, #89F09C 0%, #3CC755 100%);
     border: none; }
-    .card_btn._active .btn_item {
+    .card-btn._active__item {
       width: 10px;
       height: 2px;
       background: #ffffff;
       border-radius: 4px;
       transform: rotate(330deg);
       transition: all 0.5s ease; }
-    .card_btn._active .btn_item::before {
+    .card-btn._active__item::before {
       content: "";
       position: absolute;
       left: -20%;

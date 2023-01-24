@@ -28,8 +28,8 @@ const CardButton: React.FC<IProps> = ({children, sneakers}) => {
     },[isAdded])
 
     return (
-        <button className={`card_btn ${isAdded?'_active':''}`} onClick={addSneakers}>
-            {children?children:<span className="btn_item"/>}
+        <button className={`card-btn ${isAdded?'_active':''}`} onClick={addSneakers}>
+            {children?children:<span className="card-btn__item"/>}
         </button>
     );
 };
