@@ -313,90 +313,88 @@ a {
   padding: 25px;
   border-bottom: 1px solid #EAEAEA;
   transition: all 0.3s linear; }
-  .header_left {
+  .header .logo {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 16px; }
-    .header_left .shop_name {
+    .header .logo-info {
       display: flex;
       flex-direction: column; }
-      .header_left .shop_name h1 {
+      .header .logo-info__title {
         font-weight: 700;
         font-size: 20px;
         color: #000000;
         margin: 0;
         text-transform: uppercase; }
-  .header_right {
+      .header .logo-info__subtext {
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9D9D9D; }
+  .header__nav {
     display: flex;
     column-gap: 30px;
     transition: all 0.3s linear; }
-    .header_right a:hover path {
+    .header__nav a:hover svg path, .header__nav a:hover--svg path, .header__nav-link:hover svg path, .header__nav-link:hover--svg path {
       fill: black; }
-    .header_right a:hover .icon .amount_wrap {
+    .header__nav a:hover .header__nav-link--amount-wrap, .header__nav-link:hover .header__nav-link--amount-wrap {
       border-color: #000; }
-      .header_right a:hover .icon .amount_wrap .amount {
+      .header__nav a:hover .header__nav-link--amount-wrap .header__nav-link--amount, .header__nav-link:hover .header__nav-link--amount-wrap .header__nav-link--amount {
         color: #000; }
-    .header_right .cart_link {
+    .header__nav-link {
       display: flex;
       justify-content: space-between;
       align-items: center;
       column-gap: 10px;
       transition: all 0.3s linear;
       cursor: pointer; }
-      .header_right .cart_link .sum {
+      .header__nav-link--icon {
+        position: relative;
+        width: 22px;
+        height: 22px;
+        transition: all 0.3s linear; }
+      .header__nav-link--amount-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -9px;
+        right: -9px;
+        border: 2px solid #9D9D9D;
+        border-radius: 19px;
+        background: white;
+        transition: all 0.3s linear; }
+      .header__nav-link--amount {
+        display: block;
+        margin: 0;
+        color: #8c8b8b;
+        font-family: sans-serif;
+        padding: 2px 4px;
+        font-weight: 400;
+        font-size: 9px;
+        line-height: 9px;
+        transition: all 0.3s linear; }
+      .header__nav-link--sum {
         font-weight: 300;
         font-size: 14px;
         line-height: 17px;
         color: #868686;
         transition: all 0.3s linear; }
-      .header_right .cart_link:hover path {
+      .header__nav-link svg path, .header__nav-link--svg path {
+        transition: all 0.3s linear; }
+      .header__nav-link:hover--svg path {
         stroke: #000;
         fill: none; }
-      .header_right .cart_link:hover .sum {
+      .header__nav-link:hover--sum {
         color: #000; }
-      .header_right .cart_link:hover .icon .amount_wrap {
+      .header__nav-link:hover--amount_wrap {
         border-color: #000; }
-        .header_right .cart_link:hover .icon .amount_wrap .amount {
-          color: #000; }
+      .header__nav-link:hover--amount {
+        color: #000; }
   .header:hover {
     box-shadow: #9D9D9D 1px 1px 10px; }
-
-svg path {
-  transition: all 0.3s linear; }
-
-.subtext {
-  font-weight: 200;
-  font-size: 14px;
-  line-height: 17px;
-  color: #9D9D9D; }
-
-.icon {
-  position: relative;
-  width: 22px;
-  height: 22px;
-  transition: all 0.3s linear; }
-  .icon .amount_wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -9px;
-    right: -9px;
-    border: 2px solid #9D9D9D;
-    border-radius: 19px;
-    background: white;
-    transition: all 0.3s linear; }
-    .icon .amount_wrap .amount {
-      display: block;
-      margin: 0;
-      color: #8c8b8b;
-      padding: 2px 4px;
-      font-weight: 400;
-      font-size: 9px;
-      line-height: 9px;
-      transition: all 0.3s linear; }
 
 .slider {
   display: flex;
@@ -995,16 +993,15 @@ svg path {
     padding: 15px;
     justify-content: space-between;
     column-gap: 30px; }
-    .header_left .shop_name {
+    .header .logo-info {
       display: flex;
       flex-direction: column;
       width: 120px; }
-      .header_left .shop_name h1 {
+      .header .logo-info__title {
         font-weight: 700;
         font-size: 17px; }
-
-  .header_right {
-    column-gap: 5px; }
+    .header__nav {
+      column-gap: 5px; }
 
   .sneakers-card {
     margin: 0 auto; }
@@ -1060,16 +1057,15 @@ svg path {
     padding: 5px;
     justify-content: center;
     column-gap: 30px; }
-    .header_left .shop_name {
+    .header .logo-info {
       display: flex;
       flex-direction: column;
       width: 120px; }
-      .header_left .shop_name h1 {
+      .header .logo-info__title {
         font-weight: 700;
         font-size: 17px; }
-
-  .header_right {
-    column-gap: 5px; }
+    .header__nav {
+      column-gap: 5px; }
 
   .sneakers-card {
     margin: 0 auto; } }

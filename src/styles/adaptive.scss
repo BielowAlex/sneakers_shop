@@ -89,23 +89,25 @@
     justify-content: space-between;
     column-gap: 30px;
 
-    &_left {
+    .logo {
 
-      .shop_name {
+      &-info{
         display: flex;
         flex-direction: column;
         width: 120px;
 
-        h1 {
+        &__title {
           font-weight: 700;
           font-size: 17px;
         }
       }
     }
+
+    &__nav {
+      column-gap: 5px;
+    }
   }
-  .header_right {
-    column-gap: 5px;
-  }
+
 
 
   .sneakers-card {
@@ -195,22 +197,23 @@
     justify-content: center;
     column-gap: 30px;
 
-    &_left {
+    .logo {
 
-      .shop_name {
+      &-info {
         display: flex;
         flex-direction: column;
         width: 120px;
 
-        h1 {
+        &__title{
           font-weight: 700;
           font-size: 17px;
         }
       }
     }
-  }
-  .header_right {
-    column-gap: 5px;
+
+    &__nav {
+      column-gap: 5px;
+    }
   }
 
 
