@@ -1,13 +1,36 @@
 
-.sneakers_list{
+.sneakers-list{
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 1em;
   background: white;
 }
 
-.empty_sneakers_list{
+.sneakers-list--empty{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+
+  &__ad{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &-img{
+      width: 60px;
+      height: 60px;
+    }
+
+    &-title{
+      font-size: 24px;
+      margin: 0;
+    }
+
+    &-advice{
+      font-weight: 100;
+    }
+  }
 }

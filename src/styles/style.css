@@ -605,16 +605,31 @@ svg path {
       background: #D3D3D3;
       color: white; }
 
-.sneakers_list {
+.sneakers-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
   background: white; }
 
-.empty_sneakers_list {
+.sneakers-list--empty {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
+  .sneakers-list--empty__ad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; }
+    .sneakers-list--empty__ad-img {
+      width: 60px;
+      height: 60px; }
+    .sneakers-list--empty__ad-title {
+      font-size: 24px;
+      margin: 0; }
+    .sneakers-list--empty__ad-advice {
+      font-weight: 100; }
 
 .sneakers_card {
   border: 2px solid #F3F3F3;
@@ -772,6 +787,7 @@ svg path {
       .overlay .overlay__sneakers-card--right .delete-button {
         background: none;
         border: none;
+        border: none;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -879,24 +895,20 @@ svg path {
     opacity: 1;
     z-index: 1; }
 
-.list_empty {
+.list_empty .is_empty {
+  height: 278px;
+  width: 290px;
   display: flex;
-  justify-content: center;
-  align-items: center; }
-  .list_empty .is_empty {
-    height: 278px;
-    width: 290px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: calc(25% - 189px);
-    padding-bottom: calc(25% - 189px);
-    text-align: center; }
-    .list_empty .is_empty p {
-      font-weight: 200; }
-    .list_empty .is_empty a {
-      width: 100%; }
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: calc(25% - 189px);
+  padding-bottom: calc(25% - 189px);
+  text-align: center; }
+  .list_empty .is_empty p {
+    font-weight: 200; }
+  .list_empty .is_empty a {
+    width: 100%; }
 
 .footer {
   display: flex;
@@ -929,14 +941,14 @@ svg path {
     box-shadow: #9D9D9D 1px 1px 10px; }
 
 @media screen and (max-width: 1000px) {
-  .sneakers_list {
+  .sneakers-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr); }
 
   .slider {
     display: none; } }
 @media screen and (max-width: 720px) {
-  .sneakers_list {
+  .sneakers-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
 
@@ -961,7 +973,7 @@ svg path {
   .slider {
     display: none; } }
 @media screen and (max-width: 600px) {
-  .sneakers_list {
+  .sneakers-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr); }
 
@@ -1037,7 +1049,7 @@ svg path {
     line-height: 12px;
     color: #000000; } }
 @media screen and (max-width: 414px) {
-  .sneakers_list {
+  .sneakers-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr); }
 
