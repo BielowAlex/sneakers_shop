@@ -6,10 +6,10 @@ import {Link} from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="footer_about_us">
-                <Link to="/" className="header_left">
-                    <div className="logo">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+            <div className="footer__about-us">
+                <Link to="/" className="logo">
+                    <div className="logo-poster">
+                        <svg className="logo-poster__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
                              xmlnsXlink="http://www.w3.org/1999/xlink">
                             <rect width="40" height="40" fill="url(#pattern0)"/>
                             <defs>
@@ -22,22 +22,22 @@ const Footer = () => {
 
                         </svg>
                     </div>
-                    <div className="shop_name">
-                        <h1>REACT SNEAKERS</h1>
+                    <div className="logo-info">
+                        <h1 className="logo-info__title">REACT SNEAKERS</h1>
                     </div>
                 </Link>
-                <p>
+                <p className="footer__about-us--info">
                     We are a new online store of high-quality shoes
                     with a large assortment at a good price.
                     Fast delivery, cash on delivery, we deliver all over Ukraine.
                 </p>
             </div>
-            <ul className="footer_links">
-                <li><a href="https://www.instagram.com/alex_bielow/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram}/></a></li>
-                <li><a href="https://www.facebook.com/sasha.below.336" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook}/></a></li>
-                <li><a href="#" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTelegram}/></a></li>
-                <li><a href="#" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faViber}/></a></li>
-            </ul>
+            <nav className="footer__social-media">
+                <a className="footer__social-media--link" href="https://www.instagram.com/alex_bielow/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram}/></a>
+                <a className="footer__social-media--link" href="https://www.facebook.com/sasha.below.336" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook}/></a>
+                <a className="footer__social-media--link" href="https://www.instagram.com/alex_bielow/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTelegram}/></a>
+                <a className="footer__social-media--link" href="https://www.instagram.com/alex_bielow/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faViber}/></a>
+            </nav>
         </footer>
     );
 };

@@ -7,7 +7,7 @@
   transition: all 0.3s linear;
   background: #EEEEEE;
 
-  &_about_us {
+  &__about-us {
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -16,24 +16,28 @@
     text-align: center;
     font-size: 15px;
     font-weight: 200;
+
+    &--info{
+      font-weight: 100;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
   }
 
-  &_links {
+  &__social-media {
     display: flex;
     column-gap: 20px;
     list-style-type: none;
     font-size: 42px;
 
-    li {
-
-      a {
+      &--link {
         color: #111111;
         transition: all 0.3s linear;
         &:hover{
           color: #9D9D9D;
         }
       }
-    }
+
   }
 
   &:hover {
