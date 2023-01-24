@@ -9,11 +9,69 @@
   z-index: -1;
   transition: all 0.3s linear;
 
+  &__sneakers-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    height: 100%;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .overlay__sneakers-card {
+    border: 2px solid #F3F3F3;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding: 10px;
+    transition: all 0.3s linear;
+    width: 300px;
+
+    &--right {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      .delete-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    &--title {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+    }
+
+
+  }
+
+  &:hover {
+    box-shadow: #9D9D9D 1px 5px 10px;
+    transform: translateY(-5px);
+  }
+
   &._active {
     opacity: 1;
     z-index: 5;
   }
 }
+
 
 .cart-menu {
   position: absolute;
@@ -37,10 +95,12 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    .title{
+
+    .title {
       margin: 0;
     }
-    .close-btn{
+
+    .close-btn {
       font-size: 24px;
     }
   }
@@ -55,7 +115,6 @@
     height: 100%;
   }
 }
-
 
 
 .cart-empty {
@@ -76,7 +135,7 @@
   justify-content: center;
 
 
-  &--el{
+  &--el {
     display: flex;
 
     &__title {
@@ -97,16 +156,6 @@
   }
 }
 
-.menu_item_list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
-  height: 100%;
-  overflow-y: scroll;
-  width: 100%;
-  padding: 10px;
-}
 
 .overlay_btn {
   background: #9DD458;
@@ -127,43 +176,6 @@
   }
 }
 
-.menu_sneakers_card {
-  border: 2px solid #F3F3F3;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  column-gap: 30px;
-  padding: 10px;
-  transition: all 0.3s linear;
-  width: 300px;
-
-  &_right {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-
-    .title {
-      h3 {
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 17px;
-        color: #000000;
-      }
-    }
-
-    button {
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-  }
-
-  &:hover {
-    box-shadow: #9D9D9D 1px 5px 10px;
-    transform: translateY(-5px);
-  }
-}
 
 .back {
   position: absolute;
@@ -182,13 +194,3 @@
 }
 
 
-.delete_button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  svg {
-    width: 20px;
-    height: 20px;
-  }
-}

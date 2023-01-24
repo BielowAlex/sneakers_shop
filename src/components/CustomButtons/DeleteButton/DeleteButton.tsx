@@ -8,7 +8,7 @@ interface IProps {
 
 const DeleteButton: React.FC<IProps> = ({setIsDelete, children}) => {
     return (
-        <button onClick={()=>setIsDelete(true)} className="delete_button">
+        <button onClick={()=>setIsDelete(true)} className="delete-button">
             {children}
         </button>
     );

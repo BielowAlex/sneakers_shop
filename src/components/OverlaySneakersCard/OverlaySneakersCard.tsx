@@ -11,7 +11,7 @@ interface IProps {
     index?: number
 }
 
-const Menuitem: React.FC<IProps> = ({sneakers, index}) => {
+const OverlaySneakersCard: React.FC<IProps> = ({sneakers, index}) => {
     const [isDelete, setIsDelete] = React.useState<boolean>(false);
     const dispatch = useAppDispatch();
 
@@ -35,16 +35,16 @@ const Menuitem: React.FC<IProps> = ({sneakers, index}) => {
                     config={config.molasses}>
             {(styles, item) => !item &&
                 <animated.div style={styles}>
-                    <div className="menu_sneakers_card">
-                        <div className="menu_sneakers_card_left">
-                            <img width={70} height={70} src={imageUrl} alt="sneakers"/>
+                    <div className="overlay__sneakers-card">
+                        <div className="overlay__sneakers-card--left">
+                            <img width={70} height={70} src={imageUrl} className="overlay__sneakers-card--poster" alt="sneakers"/>
                         </div>
-                        <div className="menu_sneakers_card_right">
-                            <div className="title">
-                                <h3>{name}</h3>
-                                <div className="price">
-                                    <span className="subtext">Price:</span>
-                                    <span className="price_count">{price} UAH</span>
+                        <div className="overlay__sneakers-card--right">
+                            <div className="overlay__sneakers-card--info">
+                                <h3 className="overlay__sneakers-card--title">{name}</h3>
+                                <div className="overlay__sneakers-card--price">
+                                    <span className="overlay__sneakers-card--subtext">Price:</span>
+                                    <span className="overlay__sneakers-card--price_count">{price} UAH</span>
                                 </div>
                             </div>
                             <DeleteButton setIsDelete={setIsDelete}>
@@ -65,4 +65,4 @@ const Menuitem: React.FC<IProps> = ({sneakers, index}) => {
     );
 };
 
-export {Menuitem};
+export {OverlaySneakersCard};

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {MenuItemList} from "../MenuItemList";
+import {OverlaySneakersList} from "../OverlaySneakersList";
 import {OverlayButton} from "../CustomButtons";
 import {useAppDispatch, useAppSelector} from "../../hook/redux";
 import {sneakersActions} from "../../redux";
@@ -30,7 +30,7 @@ const Overlay: React.FC<IProps> = ({setOverlay, overlayShow}) => {
                 </div>
                 {cartList.length > 0 &&
                     <div className="cart-menu__content">
-                        <MenuItemList/>
+                        <OverlaySneakersList/>
                         <div className="checkout">
                             <ul className="order-desc">
                                 <li className="order-desc--el">

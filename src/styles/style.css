@@ -746,6 +746,47 @@ svg path {
   opacity: 0;
   z-index: -1;
   transition: all 0.3s linear; }
+  .overlay__sneakers-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    height: 100%;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 10px; }
+  .overlay .overlay__sneakers-card {
+    border: 2px solid #F3F3F3;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding: 10px;
+    transition: all 0.3s linear;
+    width: 300px; }
+    .overlay .overlay__sneakers-card--right {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center; }
+      .overlay .overlay__sneakers-card--right .delete-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .overlay .overlay__sneakers-card--right .delete-button svg {
+          width: 20px;
+          height: 20px; }
+    .overlay .overlay__sneakers-card--title {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000; }
+  .overlay:hover {
+    box-shadow: #9D9D9D 1px 5px 10px;
+    transform: translateY(-5px); }
   .overlay._active {
     opacity: 1;
     z-index: 5; }
@@ -809,16 +850,6 @@ svg path {
       flex: 1;
       border-bottom: 2px dotted #B5B5B5; }
 
-.menu_item_list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
-  height: 100%;
-  overflow-y: scroll;
-  width: 100%;
-  padding: 10px; }
-
 .overlay_btn {
   background: #9DD458;
   border-radius: 18px;
@@ -835,33 +866,6 @@ svg path {
   .overlay_btn:hover {
     background: #a7e35e; }
 
-.menu_sneakers_card {
-  border: 2px solid #F3F3F3;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  column-gap: 30px;
-  padding: 10px;
-  transition: all 0.3s linear;
-  width: 300px; }
-  .menu_sneakers_card_right {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center; }
-    .menu_sneakers_card_right .title h3 {
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 17px;
-      color: #000000; }
-    .menu_sneakers_card_right button {
-      background: none;
-      border: none;
-      cursor: pointer; }
-  .menu_sneakers_card:hover {
-    box-shadow: #9D9D9D 1px 5px 10px;
-    transform: translateY(-5px); }
-
 .back {
   position: absolute;
   top: 0;
@@ -874,14 +878,6 @@ svg path {
   .back._active {
     opacity: 1;
     z-index: 1; }
-
-.delete_button {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .delete_button svg {
-    width: 20px;
-    height: 20px; }
 
 .list_empty {
   display: flex;
